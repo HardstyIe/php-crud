@@ -3,7 +3,7 @@
 namespace App\Models;
 
 
-class Char
+class Character
 {
   private $id;
   private $name;

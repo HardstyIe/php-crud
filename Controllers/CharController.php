@@ -49,6 +49,6 @@ class CharController
   {
     $char = $_POST;
     $this->charModel->create($char);
-    header('Location: ../chars/index');
+    header('Location: ../char/index');
   }
 }

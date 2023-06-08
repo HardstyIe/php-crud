@@ -25,8 +25,6 @@ class Router
     $segments = explode('/', trim($this->requestUri, '/'));
     $controllerName = ucfirst(array_shift($segments)) . 'Controller';
     $actionName = strtolower($this->requestMethod) . ucfirst(array_shift($segments));
-    var_dump($controllerName);
-    var_dump($actionName);
     // Ajouter le namespace complet aux contrôleurs
     $controllerName = '\\App\\Controllers\\' . $controllerName;
     // Si le contrôleur n'existe pas ou que la méthode n'existe pas, afficher une erreur 404

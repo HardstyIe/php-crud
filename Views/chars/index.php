@@ -1,6 +1,6 @@
 <?php require_once 'Views/head.php'; ?>
 
-<a href="../chars/create">Ajouter un Personnage</a>
+<a href="../char/create">Ajouter un Personnage</a>
 
 <table class="table">
   <tr>

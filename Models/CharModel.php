@@ -18,14 +18,14 @@ class CharModel
   }
   public function getAll()
   {
-    $query = $this->connection->getPdo()->prepare("SELECT id,name,race,class,defense,attack FROM character");
+    $query = $this->connection->getPdo()->prepare("SELECT id,name,race,class,defense,attack FROM `character`");
     $query->execute();
-    return $query->fetchAll(PDO::FETCH_CLASS, "App/Models/Character.php");
+    return $query->fetchAll(PDO::FETCH_CLASS, "App\Models\Character");
   }
 
   public function create($char)
   {
-    $query = $this->connection->getPdo()->prepare('INSERT INTO character (name, class, race, attack, defense) VALUES (:name, :class, :race, :attack, :defense)');
+    $query = $this->connection->getPdo()->prepare('INSERT INTO `character` (name, class, race, attack, defense) VALUES (:name, :class, :race, :attack, :defense)');
     $query->execute([
       'name' => $char['name'],
       'class' => $char['class'],
