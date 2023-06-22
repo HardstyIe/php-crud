@@ -40,7 +40,7 @@ class UserController
       $_SESSION['user'] = $user;
       header('Location: /php-crud/char/index');
     } else {
-      header('Location: /php-crud/user/login');
+      header('Location: /php-crud/user/register');
     }
   }
 
