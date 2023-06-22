@@ -51,4 +51,31 @@ class CharController
     $this->charModel->create($char);
     header('Location: ../char/index');
   }
+  public function getDelete($id)
+  {
+    $this->charModel->delete($id);
+    header('Location: ../index');
+  }
+
+
+  public function getUpdate($id)
+  {
+    $char = $this->charModel->getOne($id);
+    require_once 'Views/chars/modify.php';
+  }
+
+  public function postUpdate($id)
+  {
+    $char = $_POST;
+    $this->charModel->update($id, $char);
+    header('Location: ../index');
+  }
+
+  //   fait moi le getShow qui permet d'afficher ma page details.php avec les bonne information du personnage selectionnée
+  public function getDetails($id)
+  {
+    // fait moi le code qui permet que ma page details s'affiche
+    $char = $this->charModel->getOne($id);
+    require_once 'Views/chars/details.php';
+  }
 }

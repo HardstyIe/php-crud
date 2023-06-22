@@ -1,20 +1,19 @@
 {
-    "name": "hardy/php-crud",
+    "name": "kilki/php-crud",
     "type": "project",
     "require": {
-        "twbs/bootstrap": "^5.3",
-        "fortawesome/font-awesome": "^6.4"
+        "twbs/bootstrap": "^5.3"
     },
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hardy\\PhpCrud\\": "src/"
+            "Kilki\\PhpCrud\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "HardstyIe",
-            "email": "hardstyle.dd@gmail.com"
+            "name": "Hardstyle",
+            "email": "Hardstyle.dd@gmail.com"
         }
     ]
 }

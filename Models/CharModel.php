@@ -34,4 +34,29 @@ class CharModel
       'defense' => $char['defense'],
     ]);
   }
+
+  public function delete($id)
+  {
+    $query = $this->connection->getPdo()->prepare('DELETE FROM `character` WHERE id = :id');
+    $query->execute([
+      'id' => $id,
+    ]);
+  }
+  public function update($id, $char)
+  {
+    $query = $this->connection->getPdo()->prepare('UPDATE `character` SET name = :name WHERE id = :id');
+    $query->execute([
+      'id' => $id,
+      'name' => $char['name'],
+    ]);
+  }
+
+  public function getOne($id)
+  {
+    $query = $this->connection->getPdo()->prepare("SELECT id,name,race,class,defense,attack FROM `character` WHERE id = :id");
+    $query->execute([
+      'id' => $id,
+    ]);
+    return $query->fetchObject("App\Models\Character");
+  }
 }
