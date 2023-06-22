@@ -1,4 +1,4 @@
-<?php require_once 'Views/head.php'; ?>
+<?php require_once './Views/head.php'; ?>
 
 
 <form action="" method="post">
@@ -7,4 +7,4 @@
   <input type="submit" value="Modifier">
 
 
-  <?php require_once 'Views/foot.php'; ?>
+  <?php require_once './Views/foot.php'; ?>
